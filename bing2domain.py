@@ -72,8 +72,12 @@ def find_and_print(resp, net, ip):
 		latest_ip = ip
 	# print the list
 	for i in range(0,len(res)):
-		print res[i]
-	
+		tmp = commands.getoutput("echo '%s' | sed 's/\&amp;/\&/g'" %res[i])
+		pos = tmp.find("?")
+		if pos > 0 :
+			print tmp[:pos]+colored(tmp[pos:],"cyan")
+		else:
+			print tmp
 
 #-----------------------------------------
 #		MAIN                     -
