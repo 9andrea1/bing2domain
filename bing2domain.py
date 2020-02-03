@@ -3,7 +3,7 @@ import urllib, httplib, re, commands, sys
 from termcolor import colored #except ImportError
 from netaddr import *
 
-latest_ip="" ########## manca nella versione di erik
+latest_ip="" 
 
 # main ext function
 def do(IP, NET):
